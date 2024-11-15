@@ -61,7 +61,7 @@ void Train::makeQueues(int numStations) {
  */
 void Train::print(std::ostream &output) {
     output << "{";
-    for (int i = 0; i < this->trainQueues.size(); i++) {
+    for (int i = 0; i < int(this->trainQueues.size()); i++) {
         PassengerQueue &currQueue = this->trainQueues.at(i);
         currQueue.print(output);
     }

@@ -120,7 +120,7 @@ void MetroSim::moveTrain() {
     int currStation = this->train.getCurrentStation();
     this->pickUp(currStation);
     // Move train to next station, account for wrapping first
-    if (currStation == (this->stations.size() - 1)) {
+    if (currStation == int(this->stations.size() - 1)) {
         currStation = 0;
     } else {
         currStation++;
@@ -192,7 +192,7 @@ void MetroSim::printSim(ostream &output) {
     output << "Passengers on the train: ";
     this->train.print(output);
     output << endl;
-    for (int i = 0; i < this->stations.size(); i++) {
+    for (int i = 0; i < int(this->stations.size()); i++) {
         string placeholder = "       ";
         Station &currStation = this->stations.at(i);
         if (this->train.getCurrentStation() == i) {

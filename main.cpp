@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     }
     // Construct the sim w/ station file, output file, and cmd file
     // The sim will determine validity of all provided files
-    MetroSim metroSim = MetroSim(argv[1], argv[2], cmdFile);
+    MetroSim metroSim(argv[1], argv[2], cmdFile);
     // Begin prompt loop
     metroSim.beginSimulation();
     return 0;
